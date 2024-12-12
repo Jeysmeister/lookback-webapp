@@ -1,7 +1,14 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
@@ -36,7 +43,9 @@ const Page = () => {
           onClick={() => {
             setIsUser(true);
           }}
-          className={`rounded-full font-bold w-full ${isUser ? "bg-primary text-white" : "bg-white text-primary"}`}
+          className={`rounded-full font-bold w-full ${
+            isUser ? "bg-primary text-white" : "bg-white text-primary"
+          } hover:text-white`}
         >
           USER
         </Button>
@@ -44,7 +53,9 @@ const Page = () => {
           onClick={() => {
             setIsUser(false);
           }}
-          className={`rounded-full font-bold w-full ${!isUser ? "bg-primary text-white" : "bg-white text-primary"}`}
+          className={`rounded-full font-bold w-full ${
+            !isUser ? "bg-primary text-white" : "bg-white text-primary"
+          } hover:text-white`}
         >
           MANAGEMENT
         </Button>
